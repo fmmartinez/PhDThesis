@@ -1,0 +1,47 @@
+\documentclass[12pt]{report}
+\input{packages.tex}
+\pagenumbering{gobble} % Turn page numbering off during front matter
+\pagestyle{plain}
+\begin{document}
+%--------------%
+% Front matter %
+%--------------%
+\input{Front/title}
+
+
+\pagenumbering{roman} %Restart numbering at 2 in roman style
+\input{Front/abstract}
+\setcounter{page}{2}
+
+\input{Front/preface}
+
+\input{Front/dedication}
+
+\input{Front/acknowledgements}
+
+%-----------%
+% Main body %
+%-----------%
+\cleardoublepage
+\tableofcontents
+\cleardoublepage
+\listoftables
+\input{Main/introduction}
+\pagenumbering{arabic} % Change numbering to arabic
+\input{Main/chapterone}
+
+%-------------%
+% Back Matter %
+%-------------%
+%-----------------------------------%
+% bibliography is commented out
+% but to activite it, simply uncomment
+% the commands and enter bib file name
+%-----------------------------------%
+
+\cleardoublepage
+%\addcontentsline{toc}{chapter}{Bibliography} % Add bibliography to table of contents
+%\bibliography{} % Input name of bibfile here
+%\bibliographystyle{chicago}
+%\input{Back/tables}
+\end{document}
